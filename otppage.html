@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment-gateway</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%;">
+        <!-- <div>
+            <i class="fa fa-spinner" style="width: 400px; height: 100px; color: blue;"></i>
+        </div> -->
+        
+       
+    </div>
+    <div class="container" style="justify-content: center; align-items: center; max-width: 100%; background:rgb(169, 226, 112);" >
+        
+        <div class="col">
+            
+            <div class="row" style=" justify-content:space-around; align-items:center; background: white; width: 350px; height: 300px; border-radius: 10px;">
+                <fieldset style=" width: 280px; height: 250px;">
+                    <legend><h3>Payment</h3></legend>
+                <p style="display: inline;  margin-left: 10px; margin-right: 10px;">Enter OTP</p>
+            <input type="text" id="otp" name="otp" placeholder="1234" style=" margin-top: 8px; padding:10px 10px; max-width: 100px; max-height: 40px; display: inline;">
+            <div style="display: flex; justify-content: center;align-items: center; margin-top: 20px;">
+           
+                <input type="submit" id="submit"  value="Submit" class="btn">
+            </div>
+        </fieldset>
+        </div>
+            
+        </div>
+       
+    </div>
+ <script>
+      var button = document.getElementById("submit");
+
+button.addEventListener("click", function(){
+    document.location.href = './page2.html';
+});
+ </script>
+</body>
+</html>
