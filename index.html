@@ -11,20 +11,23 @@
     <title>Payment-gateway</title>
 </head>
 <body>
-    <h2 id="h22">Payment</h2>
+   
     <div class="row" id="">
         <div class="col-75">
+            
             <div class="container">
-                <form>   
+                <h2 id="h22" style="float: left;">Payment</h2>
+                <form name="form1">   
                         <div class="row">
                             <div class="col-50">
                                 
                                 <fieldset>
                                     <legend><h3>Billing Address</h3></legend>
                                    
-                                 <label for="fname"> <i class="fa fa-user"></i>Full Name </label>
+                                 <label for="fname"> <i class="fa fa-user"></i>Full Name<li class="rq"> *</li> </label>
                                  <input type="text" id="fname" name="firstname" placeholder="Md Istakhar Ansari">
-                                 <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                 
+                                 <label for="email"><i class="fa fa-envelope"></i> Email <li class="rq">*</li></label>
                                  <input type="text" id="email" name="email" placeholder="istakhar054@gmail.com">
                                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
                                  <input type="text" id="adr" name="address" placeholder="Hooghly">
@@ -33,14 +36,15 @@
                               
                                  <div class="row">
                                      <div class="col-50">
-                                         <label for="state">State</label>
+                                         <label for="state">State <li class="rq"> *</li></label>
                                          <input type="text" id="state" name="state" placeholder="West Bengal">
-
+                                         
                                      </div>
                                      <div class="col-50">
-                                         <label for="zip">Zip code</label>
-                                         <input type="text" id="zip" name="zip" placeholder="712121">
-                                     </div>
+                                         <label for="zip">Zip code <li class="rq"> *</li></label>
+                                         <input type="text" id="zip" name="zip" maxlength="6" placeholder="712121">
+                                         
+                                        </div>
                                  </div>
                                 </fieldset>
                             </div>
@@ -55,20 +59,25 @@
                                     <i class="fa fa-cc-mastercard" style="color: red;"></i>
                                     <i class="fa fa-cc-discover" style="color:orange;"></i>
                                 </div>
-                                <label for="cname">Name on Card </label>
+                                <label for="cname">Name on Card <li class="rq">*</li> </label>
                                 <input type="text" id="cname" name="cardname" placeholder="MD ISTAKHAR ANSARI">
-                                <label for="ccnum"> Credi/Debit card Number </label>
-                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                                <label for="expmonth">Exp. Month</label>
-                                <input type="text" id="expmonth" name="expmonth" placeholder="Ferbuary">
+                                
+                                <label for="ccnum"> Credi/Debit card Number <li class="rq">*</li></label>
+                                <input type="text" id="ccnum" name="cardnumber" maxlength="16" placeholder="1111-2222-3333-4444">
+                                
+                                <label for="expmonth">Exp. Month <li class="rq">*</li></label>
+                                <input type="text" id="expmonth" name="expmonth" maxlength="2" placeholder="01-12">
+                                
                                 <div class="row">
                                     <div class="col-50">
-                                        <label for="expyear">Exp Year</label>
-                                        <input type="text" id="expyear" name="expyear" placeholder="2020">
+                                        <label for="expyear">Exp Year <li class="rq">*</li></label>
+                                        <input type="text" id="expyear" name="expyear" maxlength="4" placeholder="2020">
+                                        
                                     </div>
                                     <div class="col-50">
-                                        <label for="cvv">CVV</label>
-                                        <input type="text" id="cvv" name="cvv" placeholder="777">
+                                        <label for="cvv">CVV  <li class="rq">*</li></label>
+                                        <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="777">
+                                       
                                     </div>
                                 </div>
                                 </fieldset>    
@@ -78,7 +87,7 @@
 
                         </div>
                         <label>
-                            <input type="checkbox" checked="checked" name="sameadr">I have Read and agree to the term and condition 
+                            <input type="checkbox" checked="checked" name="confirm">I have Read and agree to the term and condition <li class="rq">*</li>
                         </label>
                         <div id="button-c">
                             
@@ -92,8 +101,8 @@
                     </div>
                 </form><br>
                 <div style="display: flexbox; justify-content:space-around; align-items: center;">
-                <button id="myButton" class="btn" >Continue</button>
-                <button id="Clear"  class="btn">Clear</button>
+                <button id="myButton" class="btn" onclick="checking()" >Continue</button>
+                <button id="Clear"  class="btn" >Clear</button>
                 <button id="cancel"  class="btn">cancel</button>
             </div>
             </div>
@@ -101,13 +110,6 @@
         </div>
         
     </div>
-
-    <script>
-   var button = document.getElementById("myButton");
-
-button.addEventListener("click", function(){
-    document.location.href = './otppage.html';
-});
-    </script>
+    <script src="javascript/main.js"></script>
 </body>
 </html>

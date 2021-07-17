@@ -20,6 +20,8 @@ body{
     flex: 50%;
 }
 .col-75{
+    display: flex;
+    justify-content: center;
     -ms-flex: 75%;
     flex: 75%;
 }
@@ -39,7 +41,7 @@ body{
   }
   .container {
       
-    max-width: 60%;
+    max-width: 70%;
     background-color: #f2f2f2;
     padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
@@ -106,4 +108,11 @@ body{
 fieldset{
     margin: 10px 10px;
     border-radius: 10px;
+}
+
+.rq{
+  text-align: left;
+  display: inline;
+  color: red;
+
 }
