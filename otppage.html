@@ -24,10 +24,10 @@
                 <fieldset style=" width: 280px; height: 250px;">
                     <legend><h3>Payment</h3></legend>
                 <p style="display: inline;  margin-left: 10px; margin-right: 10px;">Enter OTP</p>
-            <input type="text" id="otp" name="otp" placeholder="1234" style=" margin-top: 8px; padding:10px 10px; max-width: 100px; max-height: 40px; display: inline;">
+            <input type="text" id="otp" name="otp" placeholder="1234" maxlength="4" style=" margin-top: 8px; padding:10px 10px; max-width: 100px; max-height: 40px; display: inline;">
             <div style="display: flex; justify-content: center;align-items: center; margin-top: 20px;">
            
-                <input type="submit" id="submit"  value="Submit" class="btn">
+                <input type="submit" id="submit"  value="Submit"  class="btn">
             </div>
         </fieldset>
         </div>
@@ -36,11 +36,43 @@
        
     </div>
  <script>
-      var button = document.getElementById("submit");
+     function warnig(obj){
+     obj.style.borderColor="red";
+     obj.style.color="red";
 
-button.addEventListener("click", function(){
-    document.location.href = './page2.html';
-});
+}
+function sucess(obj){
+    obj.style.borderColor="#719ECE";
+    obj.style.color="black";
+}
+
+
+
+      var button = document.getElementById("submit");
+    const bx=document.getElementById("otp");
+    button.addEventListener("click", function(){
+        if(bx.value==""){
+        alert("Plese Enter OTP");
+        warnig(bx);
+        return false;
+    }
+    else{
+        if(bx.value.length<4 ){
+        alert("Plese 4 digit OTP");
+        warnig(bx);
+        return false;
+        }
+        else{
+            sucess(bx);
+            document.location.href = './page3.html';
+        }
+
+    }
+        });
+
+  
+
+
  </script>
 </body>
 </html>

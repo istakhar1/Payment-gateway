@@ -80,6 +80,9 @@ body{
     .col-25 {
       margin-bottom: 20px;
     }
+    .container{
+      max-width: 100%;
+    }
   }
   #button-c{
       display: flex;

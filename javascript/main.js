@@ -267,8 +267,6 @@ clear1.addEventListener("click", function(){
 
     var cancil1 = document.getElementById("cancel");
     cancil1.addEventListener("click", function(){
-
-
         
         document.location.href = './page2.html';
         });
